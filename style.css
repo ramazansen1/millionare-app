@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Sniglet&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Sniglet", cursive;
+  background: url("images/quiz.jpeg") center no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-size: cover;
+}
+
+.quiz-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.5);
+  width: 600px;
+  margin-bottom: 20rem;
+}
+
+.quiz-header {
+  padding: 4rem;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+
+h2 {
+  padding: 0.5rem 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+}
+
+ul li label {
+  cursor: pointer;
+}
+
+.submit {
+  border: none;
+  background-color: #a8c82f;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: block;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+#submit:focus:after {
+  content: ", I'm Sure!";
+}
+
+#submit:focus {
+  outline: none;
+  background-color: #f87da9;
+}
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  display: none;
+}
+
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 1.8rem;
+  cursor: pointer;
+}
+
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 1px solid #ddd;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+}
+
+[type="radio"]:checked + label::after,
+[type="radio"]:not(:checked) + label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background-color: #f87da9;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  -webkit-transition: all ease 0.2s;
+  transition: all 0.2s ease;
+}
+
+[type="radio"]:not(:checked) + label::after {
+  opacity: 0;
+}
+
+[type="radio"]:checked + label::after {
+  opacity: 1;
+}
