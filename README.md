@@ -1,4 +1,4 @@
-# who Wants To Be A Millionaire
+# Who Wants To Be A Millionaire?
 
 ## Description
 
@@ -10,6 +10,6 @@ A simple javascript app created for a question program
 - CSS3
 - JAVASCRIPT
 
-# Expense Calculator App View
+# Who Wants To Be A Millionaire View
 
 <img src="images/screen-view.gif">
